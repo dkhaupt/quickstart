@@ -56,6 +56,9 @@ export class HeroesComponent implements OnInit {
       .then(() => {
         this.heroes = this.heroes.filter(h => h !== hero);
         if (this.selectedHero === hero ) { this.selectedHero = null; }
+      })
+      .catch(error => {
+        console.log(error);
       });
   }
 
